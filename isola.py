@@ -29,7 +29,7 @@ class Isola:
 
             if self.turn == 0:
                 if not self.check_game_over(self.coords[0][0],self.coords[0][1]):
-                    print '\nPlayer O wins!\n\n'
+                    print '\n     Player O wins!\n\n'
                     break
 
                 try:
@@ -47,12 +47,12 @@ class Isola:
                     destroyCol = int(raw_input(' Col? '))
                     destroy = [destroyRow,destroyCol]
                 except ValueError:
-                    print '\nInvalid destruction entry. Please try again.'
+                    print '\n Invalid destruction entry. Please try again.'
                     continue
 
 
                 if not self.validate_moves(destroy,move):
-                    print '\nIllegal play. Try again.'
+                    print '\n Illegal play. Try again.'
                     continue
             else:
                 # ai moves
@@ -70,7 +70,7 @@ class Isola:
                     print ' Move: {}-{}'.format(move_list['move'][0],move_list['move'][1])
                     print ' Destruction: {}-{}'.format(move_list['destruction'][0],move_list['destruction'][1])
                 else:
-                    print '\nPlayer X wins!\n\n'
+                    print '\n     Player X wins!\n\n'
                     break
 
 
