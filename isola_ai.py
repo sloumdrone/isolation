@@ -10,9 +10,9 @@ class Opponent:
 
     def get_legal_moves(self,row,col,arr):
         board = self.game.game_board
-        if row + 1 <= 9 and board[row + 1][col] == ' - ':
+        if row + 1 <= 6 and board[row + 1][col] == ' - ':
             arr.append({'row': row + 1, 'col': col, 'points': 0})
-        if col + 1 <= 9 and board[row][col + 1] == ' - ':
+        if col + 1 <= 6 and board[row][col + 1] == ' - ':
             arr.append({'row': row, 'col': col + 1, 'points': 0})
         if row - 1 >= 0 and board[row - 1][col] == ' - ':
             arr.append({'row': row - 1, 'col': col, 'points': 0})
@@ -20,11 +20,11 @@ class Opponent:
             arr.append({'row': row, 'col': col - 1, 'points': 0})
         if row - 1 >= 0 and col - 1 >= 0 and board[row - 1][col - 1] == ' - ':
             arr.append({'row': row - 1, 'col': col - 1, 'points': 0})
-        if row + 1 <= 9 and col + 1 <= 9 and board[row + 1][col + 1] == ' - ':
+        if row + 1 <= 6 and col + 1 <= 6 and board[row + 1][col + 1] == ' - ':
             arr.append({'row': row + 1, 'col': col + 1, 'points': 0})
-        if row + 1 <= 9 and col - 1 >= 0 and board[row + 1][col - 1] == ' - ':
+        if row + 1 <= 6 and col - 1 >= 0 and board[row + 1][col - 1] == ' - ':
             arr.append({'row': row + 1, 'col': col - 1, 'points': 0})
-        if row - 1 >= 0 and col + 1 <= 9 and board[row - 1][col + 1] == ' - ':
+        if row - 1 >= 0 and col + 1 <= 6 and board[row - 1][col + 1] == ' - ':
             arr.append({'row': row - 1, 'col': col + 1, 'points': 0})
 
 
